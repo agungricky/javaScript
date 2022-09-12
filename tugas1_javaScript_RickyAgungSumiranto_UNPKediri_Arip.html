@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <script>
+        var pegawai = 'Ridwan'
+        var jabatan = 'Manager'
+        var status = 'Menikah'
+
+        if (jabatan == 'Manager') {
+            var gapok = 15000000
+            var Tj = 15000000 * 15 / 100
+            var bpjs = 15000000 * 10 / 100
+            var Tk = status == 'Menikah' ? 15000000 * 20 / 100 : 0
+            var total = gapok + Tj + bpjs + Tk
+
+        }
+
+        else if (jabatan == 'Asisten Manager') {
+            var gapok = 10000000
+            var Tj = 10000000 * 15 / 100
+            var bpjs = 10000000 * 10 / 100
+            var Tk = status == 'Menikah' ? 10000000 * 20 / 100 : 0
+            var total = gapok + Tj + bpjs + Tk
+        }
+
+        else if (jabatan == 'Staff') {
+            var gapok = 5000000
+            var Tj = 5000000 * 15 / 100
+            var bpjs = 5000000 * 10 / 100
+            var Tk = status == 'Menikah' ? 5000000 * 20 / 100 : 0
+            var total = gapok + Tj + bpjs + Tk
+        }
+
+        else {
+            var gapok = 0
+            var Tj = 0
+            var bpjs = 0
+            var Tk = status == 'Menikah' ? 0 : 0
+            var total = 0
+        }
+
+        document.write("Nama : " + pegawai + "<br>")
+        document.write("Jabatan : " + jabatan + "<br>")
+        document.write("Status : " + status + "<br>")
+    </script>
+</head>
+
+<body>
+    <table border="1" cellpadding="10" cellspacing="0" width="50%">
+        <thead>
+            <tr>
+                <th colspan="3">Slip Gaji Karyawan</th>
+            </tr>
+            <tr>
+                <th align="center">No.</th>
+                <th>Keterangan</th>
+                <th width="20%">Nilai (Rp)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td width="5%">1</td>
+                <td>Gaji Pokok</td>
+                <td> Rp.
+                    <script>
+                        document.write(gapok)
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Tunjangan Jabatan</td>
+                <td>Rp.
+                    <script>
+                        document.write(Tj)
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>BPJS</td>
+                <td>Rp.
+                    <script>
+                        document.write(bpjs)
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Tunjangan Keluarga</td>
+                <td>Rp.
+                    <script>
+                        document.write(Tk)
+                    </script>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2" align="center" bgcolor="112, 123, 124">
+                    <font color="white"> Total </font>
+                </td>
+                <td>Rp.
+                    <script>
+                        document.write(total)
+                    </script>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
