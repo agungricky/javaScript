@@ -39,10 +39,10 @@
                 var Tk = 10 / 100 * gapok
                 var Gk = gapok + Tj + Tk
 
-                if ((Gk < 7000000) && (i % 2 == 1)) {
-                    var Zp = 0
+                if ((i % 2 == 1) && (Gk >= 7000000)) {
+                    var Zp = 2.5 / 100 * Gk
                 } else {
-                    Zp = 2.5 / 100 * Gk
+                    Zp = 0
                 }
                 var THP = Gk - Zp
 
