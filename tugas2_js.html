@@ -1,0 +1,71 @@
+<script>
+    var pegawai = 3
+    if (pegawai >= 1 && pegawai <= 25) var jbtn = 'Manager'
+    else if (pegawai >= 26 && pegawai <= 50) jbtn = 'Asisten Manager'
+    else if (pegawai >= 51 && pegawai <= 75) jbtn = 'SuperVisor'
+    else if (pegawai >= 76 && pegawai <= 100) jbtn = 'Staff'
+    else jbtn = '-'
+
+    switch (jbtn) {
+        case 'Manager': var gapok = 15000000; break;
+        case 'Asisten Manager': gapok = 10000000; break;
+        case 'SuperVisor': gapok = 7000000; break;
+        case 'Staff': gapok = 4000000;
+    }
+
+    var Tj = 20 / 100 * gapok
+    var Tk = 10 / 100 * gapok
+    var Gk = gapok + Tj + Tk
+
+
+
+    var Zp = (agama >= 7000000) ? 2.5 / 100 * Gk : 0
+    var THP = Gk - Zp
+</script>
+
+<table border="0" cellpadding="10" cellspacing="3" width="100%" align="center">
+    <thead>
+        <tr>
+            <th colspan="10">DAFTAR PEGAWAI</th>
+        </tr>
+        <tr bgcolor="tomato">
+            <th>No.</th>
+            <th>NAMA</th>
+            <th>JABATAN</th>
+            <th>AGAMA</th>
+            <th>GAJI POKOK</th>
+            <th>TUNJANGAN JABATAN</th>
+            <th>TUNJUNGAN KESEHATAN</th>
+            <th>GAJI KOTOR</th>
+            <th>ZAKAT PROFESI</th>
+            <th>TAKE HOME PAY</th>
+        </tr>
+    </thead>
+    <tbody>
+        <script>
+            var pegawai = 3
+            if (pegawai >= 1 && pegawai <= 25) var jbtn = 'Manager'
+            else if (pegawai >= 26 && pegawai <= 50) jbtn = 'Asisten Manager'
+            else if (pegawai >= 51 && pegawai <= 75) jbtn = 'SuperVisor'
+            else if (pegawai >= 76 && pegawai <= 100) jbtn = 'Staff'
+            else jbtn = '-'
+
+            for (var i = 1; i <= 100; i++) {
+                var agama = (i % 2 == 0) ? 'blue' : 'yellow'
+                document.write(`
+                <tr bgcolor="${agama}">
+                    <td>${i}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>     
+                </tr>`)
+            }
+        </script>
+    </tbody>
+</table>
