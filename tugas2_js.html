@@ -1,26 +1,26 @@
 <script>
-    var pegawai = 3
-    if (pegawai >= 1 && pegawai <= 25) var jbtn = 'Manager'
-    else if (pegawai >= 26 && pegawai <= 50) jbtn = 'Asisten Manager'
-    else if (pegawai >= 51 && pegawai <= 75) jbtn = 'SuperVisor'
-    else if (pegawai >= 76 && pegawai <= 100) jbtn = 'Staff'
-    else jbtn = '-'
+    // var pegawai = 3
+    // if (pegawai >= 1 && pegawai <= 25) var jbtn = 'Manager'
+    // else if (pegawai >= 26 && pegawai <= 50) jbtn = 'Asisten Manager'
+    // else if (pegawai >= 51 && pegawai <= 75) jbtn = 'SuperVisor'
+    // else if (pegawai >= 76 && pegawai <= 100) jbtn = 'Staff'
+    // else jbtn = '-'
 
-    switch (jbtn) {
-        case 'Manager': var gapok = 15000000; break;
-        case 'Asisten Manager': gapok = 10000000; break;
-        case 'SuperVisor': gapok = 7000000; break;
-        case 'Staff': gapok = 4000000;
-    }
+    // switch (jbtn) {
+    //     case 'Manager': var gapok = 15000000; break;
+    //     case 'Asisten Manager': gapok = 10000000; break;
+    //     case 'SuperVisor': gapok = 7000000; break;
+    //     case 'Staff': gapok = 4000000;
+    // }
 
-    var Tj = 20 / 100 * gapok
-    var Tk = 10 / 100 * gapok
-    var Gk = gapok + Tj + Tk
+    // var Tj = 20 / 100 * gapok
+    // var Tk = 10 / 100 * gapok
+    // var Gk = gapok + Tj + Tk
 
 
 
-    var Zp = (agama >= 7000000) ? 2.5 / 100 * Gk : 0
-    var THP = Gk - Zp
+    // var Zp = (agama >= 7000000) ? 2.5 / 100 * Gk : 0
+    // var THP = Gk - Zp
 </script>
 
 <table border="0" cellpadding="10" cellspacing="3" width="100%" align="center">
@@ -41,31 +41,55 @@
             <th>TAKE HOME PAY</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody align="center">
         <script>
-            var pegawai = 3
-            if (pegawai >= 1 && pegawai <= 25) var jbtn = 'Manager'
-            else if (pegawai >= 26 && pegawai <= 50) jbtn = 'Asisten Manager'
-            else if (pegawai >= 51 && pegawai <= 75) jbtn = 'SuperVisor'
-            else if (pegawai >= 76 && pegawai <= 100) jbtn = 'Staff'
-            else jbtn = '-'
-
             for (var i = 1; i <= 100; i++) {
-                var agama = (i % 2 == 0) ? 'blue' : 'yellow'
+                var warna = (i % 2 == 0) ? '#00BFFF' : '#FFD700'
+                var agama = (i % 2 == 0) ? 'Non Muslim' : 'Muslim'
+
+                if (i >= 1 && i <= 25) var jbtn = 'Manager'
+                else if (i >= 26 && i <= 50) jbtn = 'Asisten Manager'
+                else if (i >= 51 && i <= 75) jbtn = 'SuperVisor'
+                else if (i >= 76 && i <= 100) jbtn = 'Staff'
+                else i = '-'
+
+                switch (jbtn) {
+                    case 'Manager': var gapok = 15000000; break;
+                    case 'Asisten Manager': gapok = 10000000; break;
+                    case 'SuperVisor': gapok = 7000000; break;
+                    case 'Staff': gapok = 4000000;
+                }
+
+                var Tj = 20 / 100 * gapok
+                var Tk = 10 / 100 * gapok
+                var Gk = gapok + Tj + Tk
+
+                // var Zp = (Gk >= 7000000) ? 2.5 / 100 * Gk : 0
+                if ((Gk < 7000000) && (i % 2 == 1)) {
+                    var Zp = 0
+                } else {
+                    Zp = 2.5 / 100 * Gk
+                }
+                var THP = Gk - Zp
+
                 document.write(`
-                <tr bgcolor="${agama}">
+                <tr bgcolor="${warna}">
                     <td>${i}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>     
+                    <td>Pegawai ${i}</td>
+                    <td>${jbtn}</td>
+                    <td>${agama}</td>
+                    <td>Rp. ${gapok}</td>
+                    <td>Rp. ${Tj}</td>
+                    <td>Rp. ${Tk}</td>
+                    <td>Rp. ${Gk}</td>
+                    <td>Rp. ${Zp} </td>
+                    <td>Rp. ${THP}</td>     
                 </tr>`)
             }
         </script>
+
+        <td>
+            <font color="white"></font>
+        </td>
     </tbody>
 </table>
