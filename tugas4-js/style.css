@@ -1,0 +1,79 @@
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    /* background-color: #1965ec; */
+    background: linear-gradient(to bottom right, #16a4d3 0%, #ffffff 100%);
+}
+
+#card img {
+    height: 150px;
+}
+
+#Content p {
+    margin-bottom: 20px;
+}
+
+label {
+    color: whitesmoke;
+}
+
+#header img {
+    width: 100%;
+    height: 400px;
+}
+
+#Content h3 {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px;
+}
+
+#card {
+    background-color: rgba(145, 144, 147, 0.686);
+    padding: 30px;
+    border-radius: 50px;
+}
+
+#input {
+    background-color: rgba(0, 0, 0, 0.681);
+    padding: 20px;
+    border-radius: 40px;
+    margin-bottom: 30px;
+}
+
+#form {
+    border-radius: 30px;
+}
+
+#table {
+    border-radius: 30px;
+}
+
+#kulkas,
+#tv,
+#hp,
+#kamera {
+    color: green;
+    font-weight: bold;
+    font-size: large;
+}
+
+#header {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#navbar a {
+    padding: 0px 10px;
+}
+
+#footer {
+    background-color: rgba(13, 164, 210, 0.688);
+    color: white;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+}

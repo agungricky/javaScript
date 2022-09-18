@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="https://id-test-11.slatic.net/shop/367bb231baf45f746d61087ed6935b12.png_2200x2200q80.jpg_.webp"
+                    alt="Lazada">
+            </div>
+        </div>
+    </section>
+
+    <section id="navbar">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-4" href="#">LAZADA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Product</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Event
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"></a></li>
+                                <li><a class="dropdown-item" href="#">11.11</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Lazada Gratis Ongkir</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">About Us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex me-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </section>
+
+
+    <div class="container-md">
+        <section id="Content">
+            <h3 class="text-center">Produk Kami</h3>
+            <p class="text-center">Selamat Pagi rekan-rekan Lazada sedang ada diskon Untuk barang-barang di bawah
+                ini Lho. <br>
+                Ayuk buruan Gercep dan checkout sebelum kehabisan barang
+            </p>
+        </section>
+
+        <section id="card">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="img/D3.webp" class="card-img-top" alt="Tv">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Tv</h5>
+                            <p id="tv" class="text-center">$ 100.37</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="img/kulkas.webp" class="card-img-top" alt="Kulkas">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Kulkas</h5>
+                            <p id="kulkas" class="text-center">$ 133.83</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="img/samsung-galaxy-a13-5g-001.jpg" class="card-img-top" alt="Handphone">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Handphone</h5>
+                            <p id="hp" class="text-center">$ 535.33</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="img/1024132canon7780x390.jpg" class="card-img-top" alt="Kamera">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Kamera</h5>
+                            <p id="kamera" class="text-center">$ 1539.08</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="input" class="mt-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 bg-danger" id="form">
+
+                        <div class="mb-1 mt-4">
+                            <label for="exampleInputEmail1" class="form-label">Nama Pembeli</label>
+                            <input type="text" class="form-control" id="pembeli" aria-describedby="emailHelp">
+                            <p id="notif"></p>
+                        </div>
+
+                        <div class="mb-1">
+                            <label for="exampleInputEmail1" class="form-label">Pilih Barang Anda</label>
+                            <select class="form-select" aria-label="Default select example" id="barang"
+                                onclick="mataUang()">
+                                <option selected>-- Pilih Barang --</option>
+                                <option value="Tv">Tv</option>
+                                <option value="Kulkas">Kulkas</option>
+                                <option value="hp">Handphone</option>
+                                <option value="kamera">Kamera</option>
+
+
+                            </select>
+                        </div>
+
+                        <div class="mb-1">
+                            <label for="exampleInputEmail1" class="form-label">Harga Barang</label>
+                            <input class="form-control" type="text" placeholder="Disabled input"
+                                aria-label="Disabled input example" disabled id="harga">
+                        </div>
+
+                        <div class="mb-1">
+                            <label for="exampleInputEmail1" class="form-label">Jumlah Barang</label>
+                            <input type="email" class="form-control" aria-describedby="emailHelp" id="jumlah">
+                            <p id="notiff"></p>
+                        </div>
+
+                        <div class="mb-5">
+                            <label for="exampleInputEmail1" class="form-label">Valuta Asing</label>
+                            <select class="form-select" aria-label="Default select example" onchange="mataUang()"
+                                id="uang">
+                                <option selected>--Pilih Mata Uang--</option>
+                                <option value="USD">$ USD</option>
+                                <option value="SGD">S$ SGD</option>
+                                <option value="EUR">€ EUR</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <table class="table table-dark table-striped">
+                            <thead>
+                                <tr class="text-center">
+                                    <th colspan="6">Data Pembelian</th>
+                                </tr>
+                                <tr>
+                                    <th>Nama Pembeli</th>
+                                    <th>Barang</th>
+                                    <th>Harga Barang</th>
+                                    <th>Jumlah Barang</th>
+                                    <th>Valuta Asing</th>
+                                    <th>Total Bayar</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td id="tPembeli"> - </td>
+                                    <td id="tBarang"> - </td>
+                                    <td id="tHarga"> - </td>
+                                    <td id="tJumlah"> - </td>
+                                    <td id="tValuta"> - </td>
+                                    <td id="tBayar"> - </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="footer">
+        <p>@CopyRight Ricky Agung Sumiranto</p>
+    </section>
+
+    <script src="javaScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
