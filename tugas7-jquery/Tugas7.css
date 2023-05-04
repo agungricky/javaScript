@@ -1,0 +1,16 @@
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #00ffff 0%, #ffffff 81%);
+}
+
+img {
+    padding: 10px;
+    height: 170px;
+}
+
+button {
+    width: 100%;
+}
